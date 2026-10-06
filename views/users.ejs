@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users - ShopEase</title>
+</head>
+
+<body>
+
+    <h1>ShopEase - Registered Users</h1>
+
+    <% if (users.length === 0) { %>
+
+        <p>No users registered yet.</p>
+
+    <% } else { %>
+
+        <table border="1" cellpadding="10">
+
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+
+            <% users.forEach(user => { %>
+
+                <tr>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.phone %></td>
+                </tr>
+
+            <% }); %>
+
+        </table>
+
+    <% } %>
+
+    <br>
+
+    <a href="/">Back to ShopEase</a>
+
+</body>
+</html>
